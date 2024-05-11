@@ -1,11 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>teste</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>ewrwerwer</>
+    <header class="cabecalho">
+        <nav>
+            <ul>
+                <li><a href="#sobreNos">Sobre o projeto</a></li>
+                <li><a href="#sobreEles">Video Pitch</a></li>
+                <li><a href="#projeto">Projeto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Sobre o Projeto -->
+    <section class="sobreNos" id="sobreNos">
+        <div class="sobreNos__imagem">
+            <img src="./assets/aperto3.jpg" width="100%">
+        </div>
+        <div class="sobreNos__texto">
+            <h1 class="sobreNos__texto__titulo">
+                SOBRE O <BR>
+                    PROJETO
+            </h1>
+            <p class="sobreNos__texto__paragrafoUm">
+                <span style="font-size: 1.25rem;"><b>Integrantes:</b></span> 
+                <br>Victor Mathias Pereira Porto - Responsável pela estilização e experiência do cliente; 
+                <br>João Pedro Coelho Maran - Responsável pela lógica e correto funcionamento da aplicação;
+            </p>
+            <p>
+                <span style="font-size: 1.25rem;"><b>Recursos:</b></span> 
+                <br> Utilizamos <b>HTML</b> e <b>CSS</b> para estruturação do site, além de <b>Javascript</b> para a lógica do projeto, <b>PostMan</b> para consumo da API e, <b>Trello</b> para planejamento Interno.
+            </p>
+            <div class="sobreNos__botoes">
+                <button class="sobreNos__botoes__botao">Nosso projeto</button>
+                <a class="sobreNos__botoes__link">Ler Mais +</a>
+            </div>
+        </div>   
+    </section>
+    <!-- Video Pitch -->
+    <section class="sobreEles" id="sobreEles">
+        <div class="sobreEles__titulo">
+            <h1>Pitch</h1>
+        </div>
+        
+        <div class="sobreEles__quadro">
+            <iframe frameborder="0" border="0" cellspacing="0" allowfullscreen="true" width="40%" height="48%" src="https://youtube.com/embed/4ibV_NLnkAA"></iframe>
+            <div class="sobreEles__texto">
+                <h2>
+                    Pitch de Apresentação
+                </h2>
+                <p>
+                    Aqui está nosso video em formato de pitch esclarecendo as idéias de nossa equipe sobre o projeto.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="projeto" id="projeto">
+        <div class="buscarCarrinho">
+            <form class="formulario" id="formulario">
+                <input class="inputBuscar" id="inputBuscar" type="search">
+                <input class="submit" type="submit" value="Enviar">
+            </form>
+            <div class="carrinho">
+                <img src="assets/cart-shopping-svgrepo-com (2).svg" alt="carrinho">
+            </div>
+        </div>
+        <div class="produtos"></div>
+    </section>
+    <footer>
+        <span>
+            Trabalho Realizado por Victor Mathias e João Pedro - Todos os direitos reservados
+        </span>
+    </footer>
 </body>
 </html>
