@@ -8,6 +8,9 @@ const formulario = document.querySelector('#formulario');
 const inputBuscar = document.querySelector('#inputBuscar');
 const listaOpcoes = document.querySelector('.produtos')
 
+let precoOriginal = 0;
+let promocao = 0;
+
 lstOpcoes = [];
 lstCarrinho = [];
 
@@ -52,19 +55,21 @@ function mostrarOpcoes() {
             count += 1;
             listaOpcoes.innerHTML +=
                 `<div class="div${count} divCard">
-                <div class="card">
-                    <div class="img-card">
-                        <img src="https://catalogopdtstorage.blob.core.windows.net/imagens-prd/produto/${i['imagemReal']}"/>
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="${i['imagemReal'] != null ? "https://catalogopdtstorage.blob.core.windows.net/imagens-prd/produto/" + i['imagemReal'] : "./assets/imageNotFound.png"}" alt="Imagem do produto não encontrada!"/>
+                        </div>
+                        <div class="card__informacoes">
+                            <div class="spanNomeMarca">
+                                <p class="spanNome">${i['nomeProduto']}</p>
+                                <p class="spanMarca">por ${i['marca']}</p>
+                            </div>
+                            <span class="spanPrecoAnterior">R$ ${precoOriginal = geraValorPromocao()}.00</span>
+                            <span class="spanPreco">R$ ${(precoOriginal - (precoOriginal * ( (promocao = geraPromocaoAleatorio()) / 100 ) )).toFixed(2)}  <span style="color: #00a650">${promocao}% OFF</span></span>
+                            <button onclick="adicionarCarrinho(${i['id']})">Comprar</button>
+                        </div>
                     </div>
-                    <div class="card__informacoes">
-                        <span class="spanNome">${i['nomeProduto']}</span>
-                        <span class="spanMarca">Por ${i['marca']}</span>
-                        <span class="spanPrecoAnterior">R$ ${geraValorAleatorio()},00</span>
-                        <span class="spanPreco">R$ ${geraValorAleatorio()},00    <span style="color: #00a650">${geraPromocaoAleatorio()}% OFF</span></span>
-                    </div>
-                    <button onclick="adicionarCarrinho(${i['id']})">Comprar</button>
-                </div>
-            </div>`;
+                 </div>`;
         }
     } else {
         listaOpcoes.innerHTML = "<h1>Sua busca não houve retorno!</h1>"
@@ -78,12 +83,12 @@ formulario.addEventListener('submit', (e) => {
 })
 
 // Funcao de precos aleatorios
-function geraValorAleatorio () {
-    return Math.floor(Math.random()*200)
+function geraValorPromocao() {
+    return Math.floor(Math.random() * (300 - 10 + 1)) + 10;
 }
 
-function geraPromocaoAleatorio () {
-    return Math.floor(Math.random()*40)
+function geraPromocaoAleatorio() {
+    return Math.floor(Math.random() * 40)
 }
 
 // Funcao que adiciona o produto ao carrinho a partir de seu ID
