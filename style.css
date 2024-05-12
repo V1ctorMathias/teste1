@@ -248,22 +248,28 @@ iframe {
 /* PROJETO */
 .projeto {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     padding: 0 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: var(--background-color-primario);
+}
+
+.divCard {
+    width: 100%;
 }
 
 .buscarCarrinho {
     background-color: #252525;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     width: 100%;
-    height: 10%;
+    height: 10vh;
     display: flex;
-    box-shadow: 1px 5px 5px #252525;
+    justify-content: center;   
+    /* box-shadow: 1px 5px 5px #252525; */
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .carrinho {
@@ -291,7 +297,7 @@ iframe {
     width: 300px;
     height: 25px;
     outline: none;
-    
+
 }
 
 .submit {
@@ -303,50 +309,53 @@ iframe {
     width: 100%;
     height: 90%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 10px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 1 / 3 / 2 / 4; }
-    .div4 { grid-area: 2 / 1 / 3 / 2; }
-    .div5 { grid-area: 2 / 2 / 3 / 3; }
-    .div6 { grid-area: 2 / 3 / 3 / 4; }
-    .div7 { grid-area: 3 / 1 / 4 / 2; }
-    .div8 { grid-area: 3 / 2 / 4 / 3; }
-    .div9 { grid-area: 3 / 3 / 4 / 4; }
-    .div10 { grid-area: 4 / 1 / 5 / 2; }
-    .div11 { grid-area: 4 / 2 / 5 / 3; }
-    .div12 { grid-area: 4 / 3 / 5 / 4; }
+}
 
 .card {
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.63);
-    box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.63);
+    /* border-radius: 10px; */
+    /* -webkit-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.63);
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.63); */
+    background-color: #FFF;
+    margin: 2px 0;
+}
+
+.img-card {
+    height: 100%;
+    margin: 30px;
 }
 
 .card img {
-    width: 100%;
-    height: 70%;
-    max-height: 300px;
+    width: 260px;
+    height: 260px;
 }
 
 .card span {
     height: 20%;
     text-align: center;
+}
+
+.card__informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .spanNome {
+        font-size: 20px;
+    }
+
+    .spanMarca {
+        font-size: 12px;
+    }
+
 }
 
 footer {

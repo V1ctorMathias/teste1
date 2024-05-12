@@ -1,6 +1,6 @@
 // REFERENTE AO CONSUMO
 const url = "https://api-stg-catalogo.redeancora.com.br/superbusca/api/integracao/catalogo/v2/produtos/query/sumario";
-const token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IkRFQkJDQUJBMjIwQjRGOTVDOTA5NTNFMURBMTlENEUzQzFDRDFGRDciLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzcnZLdWlJTFQ1WEpDVlBoMmhuVTQ4SE5IOWMifQ.eyJuYmYiOjE3MTUzOTU0MzYsImV4cCI6MTcxNTQ4MTgzNiwiaXNzIjoiaHR0cHM6Ly9zc28tY2F0YWxvZ28ucmVkZWFuY29yYS5jb20uYnIiLCJhdWQiOiJTZWFyY2hFbmdpbmVBcGkuc3RnIiwiY2xpZW50X2lkIjoiNjV0dmg2cnZuNGQ3dWVyM2hxcW0ycDhrMnB2bm01d3giLCJyb2xlIjoicmVhZCIsInNjb3BlIjpbInNlYXJjaGVuZ2luZWFwaS5zdGciXX0.HAOhUreTqfsLw8zBwVedRgeN-MOWlKH2cmkaQ7gNeOuLLzCuqoTUSTkpd05YTD_g4IWAZLjKPG7fYtXaXPuBu6Wjfv6rQ6ot1Z-7_WmqXlihmRyUuh5iPS--OF5GdQyoVhE1cLTbRC58bzb6CE3wNN0wGiDP6POlREC3TiCwwu97-JZk5ShYT9TYSzOYiOF6Tay1EXMipRIAgjejz3j58YQifkS9M-z0dCvH4ayDqh7YRvibS6kdQuaOAukvzWEq2zFMt4OLFvIhKH2872_9L9qnScJUpZyUCzKxfv9LEgXKUPkzQGLliXELb8mPZFEx874wBDpYZG8V4iUspfxPVP-6vzCYWrVKsh1HEt8GUbiUSJwWF9d82WBQjTuLQuQCtq3hVmMTSYkJW8ox2oTub5zf_N9_etfn3rUcWiGqQ95sLy6O4-AfMBwSIpQJFVdzUhS776sO5XzQU6A_9o4uOuazuJJyQSA2nNGD-URcQc5VTDUjYnpLjGMb4kFdwCqa_8rITdHSLg4eqcQAaLy2hyaqS2Y8bDRAH1mOQ310czYW2NZ4O2wJ2dwW6O5WvAD39smkVUuY0jSrw8sLPUw62i94pteOwJC9GglrbfcWIUqO2qURVU3n3abMJOAE5xVaW9Kh2epoFSym00vUpmjeNK3XHTTwW8jJSke-3eusbFk";
+const token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IkRFQkJDQUJBMjIwQjRGOTVDOTA5NTNFMURBMTlENEUzQzFDRDFGRDciLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzcnZLdWlJTFQ1WEpDVlBoMmhuVTQ4SE5IOWMifQ.eyJuYmYiOjE3MTU1MjgyOTAsImV4cCI6MTcxNTYxNDY5MCwiaXNzIjoiaHR0cHM6Ly9zc28tY2F0YWxvZ28ucmVkZWFuY29yYS5jb20uYnIiLCJhdWQiOiJTZWFyY2hFbmdpbmVBcGkuc3RnIiwiY2xpZW50X2lkIjoiNjV0dmg2cnZuNGQ3dWVyM2hxcW0ycDhrMnB2bm01d3giLCJyb2xlIjoicmVhZCIsInNjb3BlIjpbInNlYXJjaGVuZ2luZWFwaS5zdGciXX0.AXyBqG5VL6wbYVpunASsTbabHrguXTq6kf6HsD97Wfp6t-2TLPRYuvjkA81LAoc-T98YgToGwGTBUWPZ7lckuCXct_ZxCfh8GYLqcHX4HG-08Qzu3BfJlth-CL-16ac1VRmF82sGZMqch82bOG5MfBoyW_NexuAhtLjX5MhUgY2sUFurYn1H0qaxCvePRdvujfI-aQ1XyOqsMJTXhvFDwNZIfHO5ejdK-J5XWKYBfRFeMo8pnWUXGnHO3TkN2cXdlTdK55AcO_qVnpoIlcCv_D603a67fkxWtHj1KAG1ZjCp6aoa7r4hzKbq7yMEsPTrQ5njCiAqD6AGKjw3b1Rb2PdC0Pa8xgGZDGYv5Dg5GkQaDP_Jsq3UeR45TL7eieCnqU6jSuXdT5IeL8E5op1nncn_Sf8WMg2MnDEMB0xNQBIM--YHWmont68fhiuQ50MhTBRme8SUN_MXBniKJFe20KcvUvdLb_6VX41MOPeOlDyEd7ALA_H_yEZM9AGFmqO6fa-rEINs2DW8pSOCiYWKC21ZZRPox4k6cVKheuZ3tC8-nlG_INcFLLNiCJOPeDxrRA73lOyruINA2WA2aKVswG3lgLhyiIS8ZrvjFh0qWzt-NN1zwku8Movrz2322OK4emrNqJWWUdMT2fxyYfcd08FmCHOEVhnSZbSVRUnbnr8";
 const tokenType = "Bearer";
 
 // CAPTURA DOS OBJETOS DO HTML
@@ -9,9 +9,7 @@ const inputBuscar = document.querySelector('#inputBuscar');
 const listaOpcoes = document.querySelector('.produtos')
 
 lstOpcoes = [];
-lstTextos = [];
-
-
+lstCarrinho = [];
 
 // CONSULTA DA API
 async function buscarProduto(pesquisa) {
@@ -44,7 +42,7 @@ async function buscarProduto(pesquisa) {
     }
 };
 
-
+// Funcao que consulta em forma de pesquisa de produtos a API 
 function mostrarOpcoes() {
     // reset innerHTML
     listaOpcoes.innerHTML = ''
@@ -53,37 +51,43 @@ function mostrarOpcoes() {
         for (let i of lstOpcoes) {
             count += 1;
             listaOpcoes.innerHTML +=
-                `<div class="div${count}"'>
-                <div class="card" id="${i['id']}">
-                    <img src="https://catalogopdtstorage.blob.core.windows.net/imagens-prd/produto/${i['imagemReal']}"/>
-                    <span class="span${count}">${i['nomeProduto']}</span>
-                    <button onclick="">Comprar</button>
+                `<div class="div${count} divCard">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="https://catalogopdtstorage.blob.core.windows.net/imagens-prd/produto/${i['imagemReal']}"/>
+                    </div>
+                    <div class="card__informacoes">
+                        <span class="spanNome">${i['nomeProduto']}</span>
+                        <span class="spanMarca">Por ${i['marca']}</span>
+                        <span class="spanPrecoAnterior">R$ ${geraValorAleatorio()},00</span>
+                        <span class="spanPreco">R$ ${geraValorAleatorio()},00    <span style="color: #00a650">${geraPromocaoAleatorio()}% OFF</span></span>
+                    </div>
+                    <button onclick="adicionarCarrinho(${i['id']})">Comprar</button>
                 </div>
             </div>`;
-            // lstTextos.push(`span${count}`)
         }
-        const divs = document.querySelectorAll('.card');
-        divs.forEach(div => {
-            div.addEventListener('click', () => {
-                const span = div.querySelector('span');
-                const texto = span.textContent;
-                console.log(texto);
-                adicionarCarrinho(div);
-            });
-        });
-
     } else {
         listaOpcoes.innerHTML = "<h1>Sua busca não houve retorno!</h1>"
     }
 }
 
+// Ao apertar em 'enviar' funcao 'buscarProduto' recebe o valor do input
 formulario.addEventListener('submit', (e) => {
     buscarProduto(inputBuscar.value);
     e.preventDefault();
 })
 
+// Funcao de precos aleatorios
+function geraValorAleatorio () {
+    return Math.floor(Math.random()*200)
+}
 
-function adicionarCarrinho (obj) {
-    let id = obj.getAttribute("id");
-    alert(id);
+function geraPromocaoAleatorio () {
+    return Math.floor(Math.random()*40)
+}
+
+// Funcao que adiciona o produto ao carrinho a partir de seu ID
+function adicionarCarrinho(id) {
+    lstCarrinho = lstOpcoes.filter(item => (item['id'] == id));
+    console.log(lstCarrinho[0])
 }
