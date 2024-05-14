@@ -266,7 +266,7 @@ iframe {
     width: 100%;
     height: 10vh;
     display: flex;
-    justify-content: center;   
+    justify-content: center;
     /* box-shadow: 1px 5px 5px #252525; */
     margin-top: 30px;
     margin-bottom: 20px;
@@ -353,16 +353,17 @@ iframe {
     align-items: flex-start;
     justify-content: space-between;
 
-    .spanNomeMarca{
+    .spanNomeMarca {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
+
         .spanNome {
             font-size: 20px;
             text-align: left;
         }
-    
+
         .spanMarca {
             font-size: 12px;
         }
@@ -370,12 +371,17 @@ iframe {
 
     .spanPrecos {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+
+        .spanPrecoAnterior {
+            text-decoration: line-through;
+        }
+
     }
 
     button {
         text-decoration: none;
-        background:none;
+        background: none;
         height: 50px;
         width: 50%;
         border: 2px solid black;
@@ -389,6 +395,16 @@ iframe {
         color: #FFF;
     }
 
+}
+
+#modal {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 500px;
+    height: 300px;
+    margin-left: 40vw;
+    margin-top: 40vh;
 }
 
 footer {
