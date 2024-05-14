@@ -26,7 +26,7 @@ async function fetchToken() {
         const response = await fetch(loginUrl, requestOptions);
         const data = await response.json();
         token = data['access_token'];
-        return token 
+        return token
     } catch (error) {
         console.error('Erro ao obter token:', error);
         return null;
@@ -100,9 +100,9 @@ function mostrarOpcoes() {
                             </div>
                             <div class="spanPrecos">
                                 <p class="spanPrecoAnterior">R$ ${precoOriginal = geraValorPromocao()}</p>
-                                <p class="spanPreco">R$ ${precoPromocao = (precoOriginal - (precoOriginal * ( (promocao = geraPromocaoAleatorio()) / 100 ) )).toFixed(2)}  <span style="color: #00a650">${promocao}% OFF</span></p>
+                                <p class="spanPreco">R$ ${precoPromocao = (precoOriginal - (precoOriginal * ((promocao = geraPromocaoAleatorio()) / 100))).toFixed(2)}  <span style="color: #00a650">${promocao}% OFF</span></p>
                             </div>
-                            <button onclick="adicionarCarrinho(${i['id']}, ${precoPromocao})">Comprar</button>
+                            <button onclick="adicionarCarrinho(${i['id']}, ${precoPromocao})">Adicionar ao Carrinho</button>
                         </div>
                     </div>
                  </div>`;
@@ -140,15 +140,19 @@ function adicionarCarrinho(id, valor) {
 
 // Aparecer Modal
 carrinho.addEventListener('click', function () {
-    debugger
     modalCarrinho.innerHTML = '';
-    for (let item of lstCarrinho) {
-        modalCarrinho.innerHTML += 
+    lstCarrinho.forEach((item, index) => {
+        modalCarrinho.innerHTML +=
         `
-        <p>${item['id']}</p>
-        <p>${item['nome']}</p>
-        <p>${item['preco']}</p>
+        <p>Produto: ${item['nome']}</p>
+        <p>Preço: R$ ${item['preco']}</p>
+        <span onclick="removerItemCarrinho(${index})">Deseja remover produto do carrinho?</span>
+        <hr/>
         `
-    }
+    }); 
     modal.showModal();
 })
+
+function removerItemCarrinho(index) {
+    lstCarrinho.splice(lstCarrinho.indexOf(index), 1);
+}
