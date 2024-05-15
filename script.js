@@ -138,21 +138,25 @@ function adicionarCarrinho(id, valor) {
     console.log(lstCarrinho)
 }
 
-// Aparecer Modal
-carrinho.addEventListener('click', function () {
+// Preenche o carrinho com os produtos selecionados
+function preencheListarCarrinho () {
     modalCarrinho.innerHTML = '';
     lstCarrinho.forEach((item, index) => {
         modalCarrinho.innerHTML +=
         `
         <p>Produto: ${item['nome']}</p>
         <p>Preço: R$ ${item['preco']}</p>
-        <span onclick="removerItemCarrinho(${index})">Deseja remover produto do carrinho?</span>
+        <span style="cursor: pointer;" onclick="removerItemCarrinho(${index})">Deseja remover produto do carrinho?</span>
         <hr/>
         `
     }); 
     modal.showModal();
-})
+}
+// Aparecer Modal
+carrinho.addEventListener('click', preencheListarCarrinho)
 
+// Remove itens do Carrinho
 function removerItemCarrinho(index) {
-    lstCarrinho.splice(lstCarrinho.indexOf(index), 1);
+    lstCarrinho.splice(index, 1);
+    preencheListarCarrinho();
 }
