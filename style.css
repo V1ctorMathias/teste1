@@ -401,10 +401,10 @@ iframe {
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
-    width: 500px;
-    height: 300px;
-    margin-left: 40vw;
-    margin-top: 40vh;
+    width: 30%;
+    height: 30%;
+    margin-left: 35%;
+    margin-top: 30vh;
 }
 
 footer {

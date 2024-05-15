@@ -91,7 +91,7 @@ function mostrarOpcoes() {
                 `<div class="div${count} divCard">
                     <div class="card">
                         <div class="img-card">
-                            <img src="${i['imagemReal'] != null ? "https://catalogopdtstorage.blob.core.windows.net/imagens-prd/produto/" + i['imagemReal'] : "./assets/imageNotFound.png"}" alt="Imagem do produto não encontrada!"/>
+                            <img src="${i['imagemReal'] != null ? "https://catalogopdtstorage.blob.core.windows.net/imagens-prd/produto/" + i['imagemReal'] : "../assets/imageNotFound.png"}" alt="Imagem do produto não encontrada!"/>
                         </div>
                         <div class="card__informacoes">
                             <div class="spanNomeMarca">
@@ -139,19 +139,31 @@ function adicionarCarrinho(id, valor) {
 }
 
 // Preenche o carrinho com os produtos selecionados
-function preencheListarCarrinho () {
+function preencheListarCarrinho() {
+
     modalCarrinho.innerHTML = '';
+    let valorFinal = 0;
+
     lstCarrinho.forEach((item, index) => {
+        valorFinal += item['preco'];
         modalCarrinho.innerHTML +=
         `
-        <p>Produto: ${item['nome']}</p>
-        <p>Preço: R$ ${item['preco']}</p>
-        <span style="cursor: pointer;" onclick="removerItemCarrinho(${index})">Deseja remover produto do carrinho?</span>
+        <div class="dadosImagem" style="display: flex; justify-content: space-between;">
+            <div class="produtoPreco">
+                <p>Produto: ${item['nome']}</p>
+                <p>Preço: R$ ${item['preco']}</p>
+            </div>
+            <img class="lixeira" src="../assets/trash-black.svg" style="cursor: pointer; width: 20px;" onclick="removerItemCarrinho(${index})"/>
+        </div>
         <hr/>
         `
-    }); 
+    });
+    if (lstCarrinho.length > 0) {
+        modalCarrinho.innerHTML += "<p>Valor Final: R$ "+valorFinal.toFixed(2)+"</p>"
+    }
     modal.showModal();
 }
+
 // Aparecer Modal
 carrinho.addEventListener('click', preencheListarCarrinho)
 
