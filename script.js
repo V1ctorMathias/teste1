@@ -148,20 +148,22 @@ function preencheListarCarrinho() {
         valorFinal += item['preco'];
         modalCarrinho.innerHTML +=
         `
-        <div class="dadosImagem" style="display: flex; justify-content: space-between;">
+        <div class="dadosImagem" style="display: flex; justify-content: space-between; border-bottom: 1px solid black;">
             <div class="produtoPreco">
                 <p>Produto: ${item['nome']}</p>
                 <p>Preço: R$ ${item['preco']}</p>
             </div>
             <img class="lixeira" src="../assets/trash-black.svg" style="cursor: pointer; width: 20px;" onclick="removerItemCarrinho(${index})"/>
         </div>
-        <hr/>
         `
     });
     if (lstCarrinho.length > 0) {
-        modalCarrinho.innerHTML += "<p>Valor Final: R$ "+valorFinal.toFixed(2)+"</p>"
+        modalCarrinho.innerHTML += `
+        <p>Valor Final: R$ ${valorFinal.toFixed(2)}</p> 
+        <button onclick="fechaModal()">Finalizar Compra</button>
+        `
+        modal.showModal();
     }
-    modal.showModal();
 }
 
 // Aparecer Modal
@@ -171,4 +173,9 @@ carrinho.addEventListener('click', preencheListarCarrinho)
 function removerItemCarrinho(index) {
     lstCarrinho.splice(index, 1);
     preencheListarCarrinho();
+}
+
+function fechaModal () {
+    modal.close()
+    lstCarrinho = []
 }
