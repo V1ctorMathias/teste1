@@ -136,6 +136,7 @@ function adicionarCarrinho(id, valor) {
         preco: valor
     })
     console.log(lstCarrinho)
+    alert('Adicionado ao Carrinho!')
 }
 
 // Preenche o carrinho com os produtos selecionados
@@ -175,6 +176,7 @@ function removerItemCarrinho(index) {
     preencheListarCarrinho();
 }
 
+// Fecha e limpa a lista de compra do carrinho
 function fechaModal () {
     modal.close()
     lstCarrinho = []

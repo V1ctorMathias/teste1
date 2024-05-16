@@ -77,6 +77,12 @@ li a:hover {
     font-weight: 400;
 }
 
+@media (max-width: 500px) {
+    .sobreNos__texto__titulo {
+        font-size: 2rem;
+    }
+}
+
 .sobreNos__botoes {
     display: flex;
     align-items: center;
@@ -228,6 +234,20 @@ iframe {
     padding-right: 10px;
 }
 
+@media (max-width: 1100px) {
+    .sobreEles__quadro {
+        background-color: #fff;
+    }
+    
+    iframe {
+        left: 30%;
+    }
+
+    .sobreEles__texto {
+        display: none;
+    }
+}
+
 .sobreEles__texto p {
     line-height: 35px;
 }
@@ -272,6 +292,12 @@ iframe {
     margin-bottom: 20px;
 }
 
+@media (max-width: 500px) {
+    .buscarCarrinho {
+        width: 100%;
+    }
+}
+
 .carrinho {
     width: 30%;
     display: flex;
@@ -300,6 +326,7 @@ iframe {
     border: 3px solid #737373;
     color: #737373;
     padding-left: 5px;
+    margin-left: 5px;
 }
 
 .submit {
@@ -350,6 +377,26 @@ iframe {
 .card span {
     height: 20%;
     text-align: center;
+}
+
+@media (min-width: 700px) and(max-width: 1150px) {
+    .card {
+        gap: 50px;
+    } 
+
+    .card img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 699px) {
+    .card {
+        gap: 0px;
+    } 
+
+    .card img {
+        width: 100px;
+    }
 }
 
 .card__informacoes {
