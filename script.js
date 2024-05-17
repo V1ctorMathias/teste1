@@ -161,7 +161,7 @@ function preencheListarCarrinho() {
     if (lstCarrinho.length > 0) {
         modalCarrinho.innerHTML += `
         <p>Valor Final: R$ ${valorFinal.toFixed(2)}</p> 
-        <button onclick="fechaModal()">Finalizar Compra</button>
+        <button onclick="finalizaCompraModal()">Finalizar Compra</button>
         `
         modal.showModal();
     }
@@ -177,7 +177,7 @@ function removerItemCarrinho(index) {
 }
 
 // Fecha e limpa a lista de compra do carrinho
-function fechaModal () {
-    modal.close()
-    lstCarrinho = []
+function finalizaCompraModal () {
+    modal.close();
+    lstCarrinho = [];
 }

@@ -218,6 +218,7 @@ li a:hover {
 }
 
 iframe {
+    width: 40%;
     position: absolute;
     left: 22.5vw;
     top: 122vh;
@@ -379,19 +380,9 @@ iframe {
     text-align: center;
 }
 
-@media (min-width: 700px) and(max-width: 1150px) {
+@media screen and (min-width: 700px) and (max-width: 1150px) {
     .card {
         gap: 50px;
-    } 
-
-    .card img {
-        width: 100px;
-    }
-}
-
-@media (max-width: 699px) {
-    .card {
-        gap: 0px;
     } 
 
     .card img {
@@ -451,6 +442,42 @@ iframe {
 
 }
 
+@media (max-width: 699px) {
+    .card {
+        gap: 0px;
+        flex-direction: column;
+    } 
+
+    .card__informacoes {
+        width: 100%;
+        align-items: center;
+    }
+
+    .card img {
+        width: 100px;
+    }
+
+    .produtos {
+        width: 80%;
+    }
+
+    .buscarCarrinho {
+        width: 80%;
+    }
+
+    .sobreEles__quadro {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pitchIframe{
+        width: 100%;
+        position:static;
+    }
+}
+
 #modal {
     background-color: #fff;
     border-radius: 5px;
@@ -459,6 +486,8 @@ iframe {
     height: 30%;
     margin-left: 35%;
     margin-top: 30vh;
+    border: none;
+    overflow: auto;
 }
 
 .modalCarrinho {
@@ -471,9 +500,25 @@ iframe {
 #modal button {
     width: 50%;
     height: 50px;
-    position: absolute;
-    bottom: 5%;
+    position: relative;
+    bottom: 0%;
     left: 25%;
+    border: 2px solid black; 
+    background:none; 
+    cursor:pointer;
+    transition: 0.2s;
+}
+
+#modal button:hover {
+    background-color: black;
+    color: #FFF;
+}
+
+@media (max-width: 700px) {
+   #modal {
+    width: 60%;
+    margin-left: 20%;
+   } 
 }
 
 footer {
