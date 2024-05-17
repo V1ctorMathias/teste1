@@ -98,6 +98,7 @@ function mostrarOpcoes() {
                                 <p class="spanNome">${i['nomeProduto']}</p>
                                 <p class="spanMarca">por ${i['marca']}</p>
                             </div>
+                            ${i['informacoesComplementares']? "<div class='infoComplementar'>"+i['informacoesComplementares']+"</div>" : ""} 
                             <div class="spanPrecos">
                                 <p class="spanPrecoAnterior">R$ ${precoOriginal = geraValorPromocao()}</p>
                                 <p class="spanPreco">R$ ${precoPromocao = (precoOriginal - (precoOriginal * ((promocao = geraPromocaoAleatorio()) / 100))).toFixed(2)}  <span style="color: #00a650">${promocao}% OFF</span></p>
